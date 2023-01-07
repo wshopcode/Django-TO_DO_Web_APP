@@ -1,0 +1,35 @@
+<!-- todo_list/todo_app/templates/base.html -->
+<!-- Base template -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Simple.css-->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>Django To-do Web App</title>
+</head>
+
+<body>
+    <header>
+    <div>
+
+        <h1 onclick="location.href='{% url 'index' %}'">
+            To-do Web App
+        </h1>
+        <p>Welcome! This is a free django built to-do web application!</p>
+    </div>
+    </header>
+    <div>
+        {% block content %}
+
+        This content will be replaced by different html code for each page.
+
+        {% endblock %}
+    </div>
+</body>
+
+</html>
